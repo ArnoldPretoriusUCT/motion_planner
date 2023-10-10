@@ -1,0 +1,19 @@
+<launch>
+    <arg name = "veh" doc = "duckiebot"/>
+    <arg name = "param_file_name" default = "default"/>
+    <include file = "$(find motion_planner)/launch/apriltag_detector_node.launch">
+        <arg name = "veh" value = "$(arg veh)"/>
+    </include>
+    <include file = "$(find motion_planner)/launch/control_node.launch">
+        <arg name = "veh" value = "$(arg veh)"/>
+    </include>
+    <include file = "$(find motion_planner)/launch/extended_kalman_filter_node.launch">
+        <arg name = "veh" value = "$(arg veh)"/>
+    </include>
+    <include file = "$(find motion_planner)/launch/odometry_node.launch">
+        <arg name = "veh" value = "$(arg veh)"/>
+    </include>
+    <include file = "$(find motion_planner)/launch/planning_node.launch">
+        <arg name = "veh" value = "$(arg veh)"/>
+    </include>
+</launch>

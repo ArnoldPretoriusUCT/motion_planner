@@ -1,0 +1,16 @@
+<launch>
+    <arg name = "veh" doc = "duckiebot"/>
+    <arg name = "pkg_name" value = "motion_planner"/>
+    <arg name = "node_name" default = "odometry_node"/>
+    <arg name = "parameter_file_name" default = "default"/>
+    <group ns = "$(arg veh)">
+        <remap from = "odometry_node/initialise" to = "matlab/initialise"/>
+        <remap from = "odometry_node/left_ticks" to = "left_wheel_encoder_node/tick"/>
+        <remap from = "odometry_node/right_ticks" to = "right_wheel_encoder_node/tick"/>
+        <remap from = "odometry_node/update" to = "extended_kalman_filter_node/update"/>
+        <node name = "$(arg node_name)" pkg = "$(arg pkg_name)" type = "$(arg node_name)" output = "screen">
+            <param name = "veh" value = "$(arg veh)"/>
+            <rosparam command = "load" file = "$(find motion_planner)/config/$(arg node_name)/$(arg parameter_file_name).yaml"/>
+        </node>
+    </group>
+</launch>

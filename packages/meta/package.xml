@@ -1,0 +1,10 @@
+<package>
+    <name>meta</name>
+    <version>1.0.0</version>
+    <description>Meta</description>
+    <maintainer email = "MCLLIA002@myuct.ac.za">Liam McAlpine</maintainer>
+    <license>None</license>
+    <buildtool_depend>catkin</buildtool_depend>
+    <build_depend>roscpp</build_depend>
+    <run_depend>roscpp</run_depend>
+</package>

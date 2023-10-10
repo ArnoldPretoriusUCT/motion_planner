@@ -1,0 +1,10 @@
+---
+gains: [0.0]
+motor_constant: 0.0
+phi_max_degrees_control: 0.0
+range_min: 0.0
+u_v_max: 0.0
+u_v_min: 0.0
+wheel_distance: 0.0
+wheel_radius: 0.0
+wheelbase: 0.0

@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/liam/Projects/motion_planner_cpp/build/devel/setup.sh
